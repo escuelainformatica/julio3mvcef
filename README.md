@@ -43,5 +43,5 @@ Install-Package Microsoft.EntityFrameworkCore.Tools -Version 6.0.0-preview.5.213
 
 ## Base de datos
 
-![](C:\vsmayo\Julio3MVCEF\diagrama.png)
+![](diagrama.png)
 
