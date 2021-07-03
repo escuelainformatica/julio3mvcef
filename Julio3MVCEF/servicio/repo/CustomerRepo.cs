@@ -25,10 +25,10 @@ namespace Julio3MVCEF.servicio.repo
                     .OrderBy( c => c.FullName ) // c equivale a un cliente.
                     .ToList();
 
-            } // se desconecta de la base de datos
-         
+            } // se desconecta de la base de datos         
             return resultado;
         }
+
         public static List<Customer> ListarPaginado(int inicial)
         {
             var resultado = new List<Customer>();
