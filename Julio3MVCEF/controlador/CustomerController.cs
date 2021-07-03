@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Julio3MVCEF.Models;
+using Julio3MVCEF.servicio.repo;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +13,12 @@ namespace Julio3MVCEF.controlador
         public IActionResult Index()
         {
 
-            return View();
+            List<Customer> clientes=CustomerRepo.ListarPaginado(0);
+            // ViewBag, ViewData, Model
+            ViewBag.clientes=clientes;
+            ViewData["clientes"]=clientes;
+
+            return View(clientes);
         }
     }
 }

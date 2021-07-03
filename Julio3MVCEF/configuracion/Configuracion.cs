@@ -9,5 +9,6 @@ namespace Julio3MVCEF.configuracion
     {
         // las constantes son estaticas
         public const int TAMPAGINA = 20;
+        public static string Conexion= "Data Source=PCJC\\SQLDEV;Initial Catalog=MilkCo;Integrated Security=True";
     }
 }

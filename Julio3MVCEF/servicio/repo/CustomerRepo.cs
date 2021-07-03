@@ -14,7 +14,7 @@ namespace Julio3MVCEF.servicio.repo
         // usualmente las constantes se escriben en mayuscula
  
 
-        public List<Customer> ListarTodo()
+        public static List<Customer> ListarTodo()
         {
             var resultado=new List<Customer>();
             using(var contexto=new MilkCoContext())
@@ -29,7 +29,7 @@ namespace Julio3MVCEF.servicio.repo
          
             return resultado;
         }
-        public List<Customer> ListarPaginado(int inicial)
+        public static List<Customer> ListarPaginado(int inicial)
         {
             var resultado = new List<Customer>();
             using (var contexto = new MilkCoContext())
@@ -46,7 +46,7 @@ namespace Julio3MVCEF.servicio.repo
 
             return resultado;
         }
-        public void Insertar(Customer cus)
+        public static void Insertar(Customer cus)
         {
             using(var contexto=new MilkCoContext())
             {
@@ -54,7 +54,7 @@ namespace Julio3MVCEF.servicio.repo
                 contexto.SaveChanges();
             }
         }
-        public void Eliminar(int idCustomer)
+        public static void Eliminar(int idCustomer)
         {
             using (var contexto = new MilkCoContext())
             {
@@ -63,7 +63,7 @@ namespace Julio3MVCEF.servicio.repo
                 contexto.SaveChanges();
             }
         }
-        public void Eliminar(Customer cus)
+        public static void Eliminar(Customer cus)
         {
             using (var contexto = new MilkCoContext())
             {
@@ -71,7 +71,7 @@ namespace Julio3MVCEF.servicio.repo
                 contexto.SaveChanges();
             }
         }
-        public void Modificar(Customer clienteModificar)
+        public static void Modificar(Customer clienteModificar)
         {
             using (var contexto = new MilkCoContext())
             {
@@ -79,7 +79,7 @@ namespace Julio3MVCEF.servicio.repo
                 contexto.SaveChanges();
             }
         }
-        public Customer Obtener(int customerId)
+        public static Customer Obtener(int customerId)
         {
             var resultado=new Customer();
             using (var contexto = new MilkCoContext())
@@ -100,7 +100,7 @@ namespace Julio3MVCEF.servicio.repo
             }
             return resultado;
         }
-        public int Contar()
+        public static int Contar()
         {
             int resultado=0;
             using (var contexto = new MilkCoContext())
